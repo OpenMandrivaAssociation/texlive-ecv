@@ -1,11 +1,11 @@
-# revision 16097
+# revision 24928
 # category Package
 # catalog-ctan /macros/latex/contrib/ecv
-# catalog-date 2009-10-22 11:02:28 +0200
+# catalog-date 2011-12-23 14:02:37 +0100
 # catalog-license other-free
-# catalog-version 0.2
+# catalog-version 0.3
 Name:		texlive-ecv
-Version:	0.2
+Version:	0.3
 Release:	1
 Summary:	A fancy Curriculum Vitae class
 Group:		Publishing
@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The class provides an environment for creating a fancily laid
@@ -29,19 +26,19 @@ curriculum vitae. The distribution comes with a German and an
 English template.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
