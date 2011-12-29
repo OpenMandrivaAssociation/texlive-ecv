@@ -25,16 +25,8 @@ out tabular curriculum vitae inspired by the european
 curriculum vitae. The distribution comes with a German and an
 English template.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -60,7 +52,6 @@ English template.
 #- source
 %doc %{_texmfdistdir}/source/latex/ecv/ecv.dtx
 %doc %{_texmfdistdir}/source/latex/ecv/ecv.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -71,5 +62,3 @@ English template.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
