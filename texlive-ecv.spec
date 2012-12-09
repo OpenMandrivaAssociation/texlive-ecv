@@ -62,3 +62,20 @@ English template.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.3-2
++ Revision: 751322
+- Rebuild to reduce used resources
+
+* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.3-1
++ Revision: 745208
+- texlive-ecv
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.2-1
++ Revision: 718304
+- texlive-ecv
+- texlive-ecv
+- texlive-ecv
+
