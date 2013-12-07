@@ -6,7 +6,7 @@
 # catalog-version 0.3
 Name:		texlive-ecv
 Version:	0.3
-Release:	5
+Release:	6
 Summary:	A fancy Curriculum Vitae class
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ecv
