@@ -3,7 +3,7 @@ Version:	24928
 Release:	2
 Summary:	A fancy Curriculum Vitae class
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ecv
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/ecv
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ecv.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ecv.doc.r%{version}.tar.xz
